@@ -10,7 +10,9 @@ export default function Home() {
     
     <html lang="en">
       
-    <body><ProfileBar/>
+    <body>
+      
+      <Sidebar/>
     
      </body>
      
