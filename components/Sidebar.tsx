@@ -13,23 +13,18 @@ import { useState} from "react";
 
 const sidebarItems = [
   {
-    name: "Page",
-    href: "/",
+    name: "Profile",
+    href: "/mypost",
     icon: BiUserCircle,
   },
   {
-    name: "About",
-    href: "/about",
+    name: "Notification",
+    href: "/",
     icon: BiNotification,
   },
   {
-    name: "To-do List",
-    href: "/mails",
-    icon: BiTask,
-  },
-  {
     name: "My Destination",
-    href: "/contact",
+    href: "/collectionDir",
     icon: BiBookHeart,
   },
   
@@ -48,14 +43,8 @@ export default function Sidebar(){
       
     
       <aside className="sidebar" data-collapse={isCollapsedSidebar}>
-      <button className="btn" onClick={toggleSidebarcollapseHandler}>
-        <Image
-            width={50}
-            height={50}
-            className="sidebar__logo"
-            src="/logo.png"
-            alt="logo"
-          />
+      <button className="menuBtn" onClick={toggleSidebarcollapseHandler}>
+       {isCollapsedSidebar? <MdKeyboardArrowLeft/> :<MdKeyboardArrowRight/> }
       </button>
         <div className="sidebar__top">
           

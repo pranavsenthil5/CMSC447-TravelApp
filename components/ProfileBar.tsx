@@ -4,7 +4,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { BiNotification } from "react-icons/bi";
 import { BiBookHeart } from "react-icons/bi";
 import { BiTask } from "react-icons/bi";
-import { BiMenu } from "react-icons/bi";
+import { BiMenu,BiHomeAlt2 } from "react-icons/bi";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
 import { useState} from "react";
@@ -13,18 +13,18 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 const sidebarItems = [
   {
     name: "My Post",
-    href: "/about",
+    href: "/mypost",
     icon: BiUserCircle,
   },
   {
-    name: "To-do List",
-    href: "/mails",
-    icon: BiTask,
+    name: "My Destination",
+    href: "/collectionDir",
+    icon: BiBookHeart,
   },
   {
-    name: "My Destination",
-    href: "/contact",
-    icon: BiBookHeart,
+    name: "Home",
+    href: "/",
+    icon: BiHomeAlt2,
   },
   
 ];
@@ -41,7 +41,7 @@ export default function ProfileBar() {
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                   <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                     alt="Generic placeholder image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '120px', zIndex: '1' }} />
-                  <MDBBtn outline color="dark" style={{height: '30px', width:'130px', marginBlock:'-55px', marginLeft:'-70px', overflow: 'visible'}}>
+                  <MDBBtn outline color="dark" style={{height: '30px', width:'130px', marginBlock:'-5px', marginLeft:'-10px', overflow: 'visible'}}>
                     Edit profile
                   </MDBBtn>
                 </div>
@@ -73,7 +73,7 @@ export default function ProfileBar() {
       </MDBContainer>
 
     </div>
-    <div>
+    <div className="float-child left">
       
       <aside className="sidebar">
         <div className="sidebar__top">
