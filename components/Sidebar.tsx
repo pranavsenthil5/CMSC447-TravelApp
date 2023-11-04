@@ -1,4 +1,5 @@
 "use client"
+// side nevigation bar in the homepage
 import Image from "next/image";
 import { BiUserCircle } from "react-icons/bi";
 import { BiNotification } from "react-icons/bi";

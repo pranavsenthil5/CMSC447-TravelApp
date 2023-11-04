@@ -46,8 +46,7 @@ export default function ProfileBar() {
                   </MDBBtn>
                 </div>
                 <div className="ms-3" style={{ marginTop: '130px' }}>
-                  <MDBTypography tag="h5">Andy Horwitz</MDBTypography>
-                 
+                  <MDBTypography tag="h5">Andy Horwitz</MDBTypography>         
                 </div>
               </div>
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa', height:'80px' }}>
