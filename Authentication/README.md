@@ -34,6 +34,7 @@ flask run
 
 ## Install following supabase libraries
 
+
 ```bash
 npm install @supabase/supabase-js
 ```
@@ -51,7 +52,15 @@ npm install pg-promise
 ```
 
 ```bash
-npm install axios 
+npm npm install react
+```
+
+```bash
+npm install react-bootstrap
+```
+
+```bash
+npm install axios
 ```
 
 ## Environment 
