@@ -21,9 +21,7 @@
     "react-dom": "latest",
     "react-grid-gallery": "^1.0.1-alpha.0",
     "react-icons": "^4.11.0",
-    "rsuite": "^5.41.0",
-    "wink-eng-lite-web-model": "^1.5.2",
-    "wink-nlp": "^1.14.3"
+    "rsuite": "^5.41.0"
   },
   "devDependencies": {
     "@types/node": "latest",

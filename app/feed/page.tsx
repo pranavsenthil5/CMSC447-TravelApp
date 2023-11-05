@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Description from './components/description'
 import ImageGrid from './components/imageGrid'
-import ProfileBar from './components/profilebar'
 
 
 
@@ -53,20 +52,19 @@ export default function Post() {
 
     // console.log(post.description)
     return (
-        // <>
-        // <div className="flex flex-row h-screen">
-        //     {/* center the content in both the components */}
+        <>
+        <div className="flex flex-row h-screen">
+            {/* center the content in both the components */}
             
-        //     <div className="flex flex-col w-1/2 justify-center items-center">
-        //         <ImageGrid images={images} location={post.location} />
-        //     </div>
-        //     <div id="divider" className="border-r-2 border-gray-100"></div>
-        //     <div className="flex flex-col w-1/2  h-screen overflow-auto">
-        //         <Description post={post} />
-        //     </div>
-        // </div>
+            <div className="flex flex-col w-1/2 justify-center items-center">
+                <ImageGrid images={images} location={post.location} />
+            </div>
+            <div id="divider" className="border-r-2 border-gray-100"></div>
+            <div className="flex flex-col w-1/2  h-screen overflow-auto">
+                <Description post={post} />
+            </div>
+        </div>
         
-        // </>
-        <ProfileBar />
+        </>
     )
 }

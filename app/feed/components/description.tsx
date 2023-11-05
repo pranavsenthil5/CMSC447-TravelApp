@@ -1,14 +1,5 @@
 import { Tag, TagGroup } from 'rsuite';
-// Install the @types/commentbox.io package to provide TypeScript with type definitions for the commentbox.io module
-// Run the following command in your terminal: npm i --save-dev @types/commentbox.io
-// import { useEffect } from 'react';
-// import comromise
 import compromise from 'compromise';
-
-// // winknlp
-// import wink from 'wink-nlp';
-// import model from 'wink-eng-lite-web-model';
-
 
 interface DescriptionProps {
     post: {
@@ -19,11 +10,9 @@ interface DescriptionProps {
     }
 }
 
-
 export default function Description({ post }: DescriptionProps) {
     const doc = compromise(post.description);
     var locations = doc.places().out('array');
-    const people = doc.people().out('array');
     const hashtags = doc.hashTags().out('array');
 
     // Remove special characters from locations
@@ -34,13 +23,8 @@ export default function Description({ post }: DescriptionProps) {
     // convert to set to remove duplicates
     const locationsSet = new Set(locations);
 
-    // convert back to array
     locations = Array.from(locationsSet);
-    
 
-
-
-    // const nlp = wink((model));
     return (
         <div className="flex flex-col w-full h-full p-8 text-black mt-20">
             <div className="flex flex-row mb-10">

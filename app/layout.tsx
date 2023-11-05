@@ -1,4 +1,4 @@
-// import 'rsuite/dist/rsuite.min.css';
+import 'rsuite/dist/rsuite.min.css';
 
 import './globals.css'
 import type { Metadata } from 'next'
