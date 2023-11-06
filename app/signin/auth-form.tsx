@@ -70,7 +70,7 @@ export default function AuthForm() {
       
       showLinks={false}
       providers={[]}
-      redirectTo='/auth/callback'
+      redirectTo='https://cmsc447.vercel.app/auth/callback'
     />
   )
 }
