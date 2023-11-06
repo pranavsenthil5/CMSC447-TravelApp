@@ -10,11 +10,11 @@ export async function middleware(req) {
   } = await supabase.auth.getUser()
 
   // if user is signed in and the current path is / redirect the user to /account
-//   if (user && req.nextUrl.pathname === '/') {
-//     return NextResponse.redirect(new URL('/feed', req.url))
-//   }
-
   if (user && req.nextUrl.pathname === '/signin') {
+    return NextResponse.redirect(new URL('/feed', req.url))
+  }
+
+  if (user && req.nextUrl.pathname === '/') {
     return NextResponse.redirect(new URL('/feed', req.url))
   }
 
@@ -27,5 +27,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ['/', '/feed', '/signin'],
+  matcher: ['/', '/signin', '/feed'],
 }
