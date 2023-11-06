@@ -49,22 +49,30 @@ export default function Post() {
         description: postDescription
     }
 
-
-    // console.log(post.description)
+    // add a button on the top right to go to /feed
     return (
         <>
-        <div className="flex flex-row h-screen">
-            {/* center the content in both the components */}
+            <div className="relative">
+                {/* <button className="bg-white text-black font-bold py-2 px-4 rounded absolute top-0 right-0">
+                    Log out
+                </button> */}
+                <form action="/auth/signout" method="POST">
+                <button className="absolute text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm text-center px-5 py-2.5 top-0 right-0 m-1">Log out</button>
+                </form>
+                <div className="flex flex-row h-screen">
+                {/* center the content in both the components */}
+
+                <div className="flex flex-col w-1/2 justify-center items-center">
+                    <ImageGrid images={images} location={post.location} />
+                </div>
+                <div id="divider" className="border-r-2 border-gray-100"></div>
+                <div className="flex flex-col w-1/2  h-screen overflow-auto">
+                    <Description post={post} />
+                </div>
+            </div>
+            </div>
             
-            <div className="flex flex-col w-1/2 justify-center items-center">
-                <ImageGrid images={images} location={post.location} />
-            </div>
-            <div id="divider" className="border-r-2 border-gray-100"></div>
-            <div className="flex flex-col w-1/2  h-screen overflow-auto">
-                <Description post={post} />
-            </div>
-        </div>
-        
+
         </>
     )
 }
