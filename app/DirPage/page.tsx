@@ -4,7 +4,7 @@ import TaskTracker from "@/components/TaskTracker"
 export default function CollectPage({searchParams}:{searchParams:{name: String;}}){
    
     return(
-        <div className="float-container">
+      <div className="float-container">
     
       <ProfileBar/>
       

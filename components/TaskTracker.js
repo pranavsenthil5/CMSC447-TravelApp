@@ -1,11 +1,9 @@
 'use client'
 import React, { useState } from "react";
-import React from 'react'
- 
-import React, { useState } from "react";
-
+import DatePicker from "react-datepicker";
+import 'react-datepicker/dist/react-datepicker.css'
 const Todo = () => {
- const [showForm, setshowform] = useState(true);
+ const [showForm, setshowform] = useState(false);
  const [showNew, setshowNew] = useState(true);
  const [showDelete, setshowDelete] = useState(true);
  const [toggleSubmit, settoggleSubmit] = useState(true);
@@ -16,11 +14,13 @@ const Todo = () => {
  const [deleteMessagesuccess, setdeleteMessagesuccess] = useState(false);
  const [inputTitle, setinputTitle] = useState("");
  const [inputDesc, setinputDesc] = useState("");
+ const [inputDate, setinputDate] = useState(new Date());
  const [items, setitems] = useState([
    {
      id: "001",
-     name: "Default Task",
-     desc: "Default Description",
+     name: "Let's go",
+     desc: "Enjoy the new journey",
+     date: "",
      status: false,
    },
  ]);
@@ -31,6 +31,9 @@ const Todo = () => {
  };
  const handleInputdesc = (e) => {
    setinputDesc(e.target.value);
+ };
+ const handleInputDate = (e) =>{
+    setinputDate(e.target.value)
  };
  //   HANDLING INPUT FIELDS
  
@@ -47,7 +50,7 @@ const Todo = () => {
      setitems(
        items.map((elem) => {
          if (elem.id === isEditItem) {
-           return { ...elem, name: inputTitle, desc: inputDesc };
+           return { ...elem, name: inputTitle, desc: inputDesc, date: inputDate,};
          }
          return elem;
        })
@@ -55,6 +58,7 @@ const Todo = () => {
  
      setinputTitle("");
      setinputDesc("");
+     setinputDate("");
      settoggleSubmit(true);
      setshowform(false);
      setshowDelete(true);
@@ -63,10 +67,12 @@ const Todo = () => {
        id: new Date().getTime().toString(),
        name: inputTitle,
        desc: inputDesc,
+       date: inputDate,
      };
      setitems([allinputTitle, ...items]);
      setinputTitle("");
      setinputDesc("");
+     setinputDate("");
      setshowform(false);
    }
  };
@@ -101,6 +107,7 @@ const Todo = () => {
    });
    setinputTitle(newEditItem.name);
    setinputDesc(newEditItem.desc);
+   setinputDate(newEditItem.date);
    // setshowDelete(true)
  
    setisEditItem(id);
@@ -113,8 +120,11 @@ const Todo = () => {
    //   alert("hello")
    setshowform(true);
    setshowList(true);
-   setshowNew(false);
+   setshowNew(true);
  };
+ const handleClose =()=>{
+  setshowform(false);
+ }
  // ADD NEW TASK
  return (
    <>
@@ -162,7 +172,31 @@ const Todo = () => {
                  onChange={handleInputdesc}
                  value={inputDesc}
                />
+               <lable className = "my-2" htmlFor="Date">
+                Select date
+               </lable>
+               {/* <input type = "text"
+                      name="date"
+                      placeholder="Select Date"
+                      className="w-100 my-1 p-2"
+                      onChange={handleInputDate}
+                      value={inputDate}> */}
+                    <div>
+                    <DatePicker
+                      showTimeSelect
+                      minTime={new Date(0, 0, 0, 12, 0)}
+                      maxTime={new Date(0, 0, 0, 11, 59)}
+                      selected={inputDate}
+                      onChange={inputDate => setinputDate(inputDate)}
+                      dateFormat="MMMM d, yyyy h:mmaa"
+                    />
+                  </div>
+                      {/* </input> */}
+               
                {/* <div className="text-center"> */}
+               <button className="btn btn-primary my-2 m-2" onClick={handleClose}>
+                  Close
+               </button>
                {toggleSubmit ? (
                  <button className="btn btn-primary my-2">Save</button>
                ) : (
@@ -194,6 +228,7 @@ const Todo = () => {
                  <div>
                    <h4>{elem.name}</h4>
                    <p>{elem.desc}</p>
+                   <p>{elem.date.toString()}</p>
                  </div>
                    <button
                      className="btn btn-primary mx-2"
