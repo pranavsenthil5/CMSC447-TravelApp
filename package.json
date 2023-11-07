@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
+    "@nextui-org/react": "^2.2.4",
     "@supabase/auth-helpers-nextjs": "^0.8.7",
     "@supabase/auth-helpers-react": "^0.4.2",
     "@supabase/auth-ui-react": "^0.4.6",
@@ -21,14 +22,17 @@
     "axios": "^1.6.0",
     "commentbox.io": "^2.1.0",
     "compromise": "^14.10.0",
+    "framer-motion": "^10.16.4",
     "mdb-react-ui-kit": "^6.3.0",
     "next": "latest",
     "pg-promise": "^11.5.4",
     "react": "latest",
+    "react-datepicker": "^4.21.0",
     "react-dom": "latest",
     "react-grid-gallery": "^1.0.1-alpha.0",
     "react-icons": "^4.11.0",
-    "rsuite": "^5.41.0"
+    "rsuite": "^5.41.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "latest",
