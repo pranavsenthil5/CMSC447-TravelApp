@@ -23,6 +23,7 @@
     "compromise": "^14.10.0",
     "mdb-react-ui-kit": "^6.3.0",
     "next": "latest",
+    "pg": "^8.11.3",
     "pg-promise": "^11.5.4",
     "react": "latest",
     "react-dom": "latest",
