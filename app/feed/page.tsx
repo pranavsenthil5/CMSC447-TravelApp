@@ -55,9 +55,9 @@ export default function Post() {
             <div className="relative">
 
                 {/* UNCOMMENT FOR AUTH */}
-                {/* <form action="/auth/signout" method="POST">
-                    <button className="absolute text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm text-center px-5 py-2.5 top-0 right-0 m-1">Log out</button>
-                </form> */}
+                <form action="/mypost" method="POST">
+                    <button className="absolute text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm text-center px-5 py-2.5 top-0 right-0 m-1">My Post</button>
+                </form> 
 
                 <div className="flex flex-row h-screen">
 

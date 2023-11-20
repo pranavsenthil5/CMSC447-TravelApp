@@ -1,0 +1,109 @@
+.frame6UserLogineditUserChild {
+    position: absolute;
+    /* top: calc(50% - 219px); /* Reduced by 40% */
+    /* left: calc(50% - 92px); /* Reduced by 40% */
+    /* border-radius: 50%;
+    width: 188px; /* Reduced by 40% */
+    /* height: 162px; /* Reduced by 40% */
+    /* object-fit: cover;
+  }
+   */ 
+  .drift {
+    top: 18px; /* Reduced by 40% */
+    left: 782px; /* Reduced by 40% */
+    letter-spacing: 0.21em;
+    font-family: var(--font-baloo-da-2);
+    width: 75px; /* Reduced by 40% */
+    height: 31px; /* Reduced by 40% */
+    font-size: 1.8em; /* Reduced by 40% */
+  }
+  
+  .uploadPicture {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--white);
+    top: calc(50% - 203px); /* Reduced by 40% */
+    left: calc(50% - 132px); /* Reduced by 40% */
+    font-size: 21.6px; /* Reduced by 40% */
+    font-weight: 300;
+    font-family: var(--font-nunito);
+    color: var(--color-black);
+    text-align: left;
+    width: 147px; /* Reduced by 40% */
+    height: 33px; /* Reduced by 40% */
+  }
+  
+  .editProfile {
+    top: 18px; /* Reduced by 40% */
+    left: 425px;
+    font-family: var(--font-numans);
+    width: 230px; /* Reduced by 40% */
+    height: 49px; /* Reduced by 40% */
+    -webkit-text-stroke: 1px #000;
+    font-size: 1.8em; /* Reduced by 40% */
+  }
+  
+  .frame6UserLogineditUserItem {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #2b880a;
+    position: absolute;
+    top: 630px; /* Reduced by 40% */
+    left: 233px; /* Reduced by 40% */
+    border-radius: var(--br-11xl);
+    width: 175px; /* Reduced by 40% */
+    height: 63px; /* Reduced by 40% */
+  }
+  
+  .signOut,
+  .update {
+    position: absolute;
+    top: 654px; /* Reduced by 40% */
+    left: 247px; /* Reduced by 40% */
+    font-size: 28.8px; /* Reduced by 40% */
+    font-weight: 500;
+    color: var(--color-white);
+    text-align: center;
+    display: inline-block;
+    width: 129.6px; /* Reduced by 40% */
+    height: 27.6px; /* Reduced by 40% */
+  }
+  
+  .rectangleDiv {
+    position: absolute;
+    top: 150px; /* Reduced by 40% */
+    left: 256px; /* Reduced by 40% */
+    background-color: rgba(219, 231, 232, 0.48);
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    width: 585px; /* Reduced by 40% */
+    height: 342.6px; /* Reduced by 40% */
+  }
+  
+  .userNameFirstContainer {
+    position: absolute;
+    top: 251.4px; /* Reduced by 40% */
+    left: 326.4px; /* Reduced by 40% */
+    font-weight: 300;
+    font-family: var(--font-nunito);
+    display: flex;
+    align-items: center;
+    width: 484.2px; /* Reduced by 40% */
+    height: 363.6px; /* Reduced by 40% */
+  }
+  
+  .inputBg,
+  .inputBg1,
+  .inputBg2,
+  .inputBg3,
+  .inputBg4 {
+    width: 220px; /* Reduced by 40% */
+    border: 0;
+    background-color: var(--white);
+    position: absolute;
+    top: 432px; /* Reduced by 40% */
+    left: 525px; /* Reduced by 40% */
+  }
+   */ */

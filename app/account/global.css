@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Numans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-nunito: Nunito;
+  --font-inter: Inter;
+  --font-numans: Numans;
+  --font-baloo-da-2: "Baloo Da 2";
+
+  /* font sizes */
+  --font-size-45xl: 64px;
+  --font-size-29xl: 48px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Border radiuses */
+  --br-11xl: 30px;
+}

@@ -1,0 +1,149 @@
+.frame6UserLogineditUserChild {
+    position: absolute;
+    top: calc(50% - 609px);
+    left: calc(50% - 256px);
+    border-radius: 50%;
+    width: 314px;
+    height: 270px;
+    object-fit: cover;
+  }
+  .drift {
+    top: 52px;
+    left: 1685px;
+    letter-spacing: 0.21em;
+    font-family: var(--font-baloo-da-2);
+    width: 209px;
+    height: 86px;
+  }
+  .drift,
+  .editProfile,
+  .uploadPicture {
+    position: absolute;
+    display: flex;
+    align-items: center;
+  }
+  .uploadPicture {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--white);
+    top: calc(50% - 339px);
+    left: calc(50% - 220px);
+    font-size: 36px;
+    font-weight: 300;
+    font-family: var(--font-nunito);
+    color: var(--color-black);
+    text-align: left;
+    width: 245px;
+    height: 55px;
+  }
+  .editProfile {
+    top: 29px;
+    left: 709px;
+    font-family: var(--font-numans);
+    width: 384px;
+    height: 82px;
+    -webkit-text-stroke: 1px #000;
+  }
+  .frame6UserLogineditUserInner,
+  .frame6UserLogineditUserItem {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #2b880a;
+    position: absolute;
+    top: 1050px;
+    left: 389px;
+    border-radius: var(--br-11xl);
+    width: 292px;
+    height: 105px;
+  }
+  .frame6UserLogineditUserInner {
+    background-color: #88200a;
+    left: 1050px;
+  }
+  .signOut,
+  .update {
+    position: absolute;
+    top: 1060px;
+    left: 411px;
+    font-size: var(--font-size-29xl);
+    font-weight: 500;
+    color: var(--color-white);
+    text-align: center;
+    display: inline-block;
+    width: 216px;
+    height: 46px;
+  }
+  .signOut {
+    left: 1110px;
+  }
+  .rectangleDiv {
+    position: absolute;
+    top: 469px;
+    left: 427px;
+    background-color: rgba(219, 231, 232, 0.48);
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    width: 975px;
+    height: 571px;
+  }
+  .userName {
+    margin: 0;
+  }
+  .userNameFirstContainer1 {
+    line-break: anywhere;
+    width: 100%;
+  }
+  .userNameFirstContainer {
+    position: absolute;
+    top: 439px;
+    left: 494px;
+    font-weight: 300;
+    font-family: var(--font-nunito);
+    display: flex;
+    align-items: center;
+    width: 807px;
+    height: 606px;
+  }
+  .inputBg,
+  .inputBg1,
+  .inputBg2,
+  .inputBg3,
+  .inputBg4 {
+    width: 367px;
+    border: 0;
+    background-color: var(--white);
+    position: absolute;
+    top: 720px;
+    left: 875px;
+  }
+  .inputBg1,
+  .inputBg2,
+  .inputBg3,
+  .inputBg4 {
+    top: 802px;
+  }
+  .inputBg2,
+  .inputBg3,
+  .inputBg4 {
+    top: 889px;
+  }
+  .inputBg3,
+  .inputBg4 {
+    top: 638px;
+  }
+  .inputBg4 {
+    top: 556px;
+  }
+  .frame6UserLogineditUser {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 1488px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-45xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
