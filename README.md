@@ -2,6 +2,10 @@
 
 
 ```bash
+cd Backend_Database_Connection
+```
+
+```bash
 py -3 -m venv venv
 ```
 
@@ -30,7 +34,6 @@ flask run
 
 
 # Run the program
-
 
 ```bash
 npm install @supabase/supabase-js
