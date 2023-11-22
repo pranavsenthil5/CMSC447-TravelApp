@@ -35,10 +35,17 @@ flask run
 
 # Run Supabase Frontend
 
-## Navigated back to main folder
+## Navigated back to root directory
 
 ```bash
 cd ..
+```
+
+### Create a .env.local in your root directory
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=https://kqzctdxtctryinogwpip.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxemN0ZHh0Y3RyeWlub2d3cGlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTUwODcyNDcsImV4cCI6MjAxMDY2MzI0N30.HN4g1L7K6GhXhA7ppIAWEah7MPe4K4k9B2m9p5GnZhA
 ```
 
 ```bash
