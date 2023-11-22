@@ -33,7 +33,13 @@ flask run
 ```
 
 
-# Run the program
+# Run Supabase Frontend
+
+## Navigated back to main folder
+
+```bash
+cd ..
+```
 
 ```bash
 npm install @supabase/supabase-js
