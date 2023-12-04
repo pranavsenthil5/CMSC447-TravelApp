@@ -140,6 +140,7 @@ const AddFolderForm = ({ onAddFolder, folders, setFolders }) => {
                     query: {
                       name: folder.folderName,
                       id : folder.id,
+                      location: folder.location,
                     },
                   }}
                   passHref

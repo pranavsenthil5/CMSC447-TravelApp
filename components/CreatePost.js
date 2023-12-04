@@ -218,7 +218,7 @@ const CreatePost = () => {
       author: 1,
       date: post_date,
       location: location,
-      tags: tags,
+      tags: [],
       image_uids: [data.fileUrl],
       description: escaped_description
     }

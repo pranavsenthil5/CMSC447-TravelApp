@@ -74,10 +74,10 @@ const Weather = ({ defaultLocation }) => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: 50 }}>
-      <Typography variant="h4" gutterBottom>
+      {/* <Typography variant="h4" gutterBottom>
         Weather Forecast
-      </Typography>
-      <div style={{ marginBottom: 20 }}>
+      </Typography> */}
+      {/* <div style={{ marginBottom: 20 }}>
         <TextField
           label="Enter City"
           variant="outlined"
@@ -87,8 +87,8 @@ const Weather = ({ defaultLocation }) => {
         <Button variant="contained" color="primary" onClick={handleSearch} style={{ marginLeft: 10 }}>
           Search
         </Button>
-      </div>
-      {weatherData && (
+      </div> */}
+      {/* {weatherData && (
         <Card>
           <CardContent>
             <Typography variant="h2" component="div">
@@ -112,8 +112,83 @@ const Weather = ({ defaultLocation }) => {
             </Box>
           </CardContent>
         </Card>
-      )}
-      {forecastData && (
+      )} */}
+
+      {/* make two components flex by row */}
+      <div className="flex justify-between">
+        {weatherData && (
+          <Card className="max-w-xs mx-auto bg-white shadow-md rounded-md p-4">
+            <CardContent>
+              <Typography variant="h2" component="div" className="text-4xl font-bold">
+                {weatherData.main.temp} °C
+              </Typography>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                flexDirection="column"
+                marginTop={2}
+              >
+                <img
+                  src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
+                  alt="Weather Icon"
+                  className="w-12 h-12"
+                />
+                <Typography color="textSecondary" variant="h6" style={{ marginTop: 10 }}>
+                  {weatherData.weather[0].description}
+                </Typography>
+              </Box>
+            </CardContent>
+          </Card>
+        )}
+        {forecastData && (
+          <Card style={{ marginTop: 20, width: '80%', margin: 'auto' }}>
+            <CardContent>
+              <Typography variant="h5" component="div" gutterBottom>
+                7-Day Forecast
+              </Typography>
+              <div className="flex justify-between">
+                {extractUniqueDays(forecastData.list).map((day, index) => {
+                  const filteredForecast = filterForecastByDay(day, forecastData.list);
+                  const dayWeather = filteredForecast[0]; // Consider the first forecast data for the day
+                  return (
+                    <Box
+                      key={index}
+                      textAlign="center"
+                      p={2}
+                      borderRadius={8}
+                      width="calc(100% / 7 - 10px)"
+                      className="cursor-pointer mb-4"
+                      onClick={() => openWeatherCom(dayWeather)}
+                    >
+                      <Typography variant="subtitle2">
+                        {new Date(dayWeather.dt * 1000).toLocaleDateString('en-US', {
+                          weekday: 'short',
+                        })}
+                      </Typography>
+                      <img
+                        src={`http://openweathermap.org/img/wn/${dayWeather.weather[0].icon}.png`}
+                        alt="Weather Icon"
+                        className="w-10 h-10 mx-auto mt-2"
+                      />
+                      <Typography color="textSecondary">{dayWeather.main.temp} °C</Typography>
+                      {dayWeather.rain && dayWeather.rain['3h'] && (
+                        <Typography color="textSecondary">
+                          Rain: {dayWeather.rain['3h']} mm
+                        </Typography>
+                      )}
+                    </Box>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+
+
+
+      {/* {forecastData && (
         <Card style={{ marginTop: 20, width: '80%', margin: 'auto' }}>
           <CardContent>
             <Typography variant="h5" component="div" gutterBottom>
@@ -156,10 +231,10 @@ const Weather = ({ defaultLocation }) => {
             </div>
           </CardContent>
         </Card>
-      )}
+      )} */}
+
     </div>
   );
 };
 
 export default Weather;
-      
