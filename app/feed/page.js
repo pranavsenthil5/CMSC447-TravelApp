@@ -139,16 +139,27 @@ export default function Post() {
         //   post.images = ['/img1.png', '/img2.png', '/img3.png'];
         // });
 
-        // format the date
-        data.forEach(post => {
-          var date = new Date(post.date);
-          // show the date in the format: Month Day, Year
-
-          // set zone to EST
-          date.setHours(date.getHours() - 5);
+        // the date looks like 2023-04-01, ouput it as April 1, 2023
+        // data.forEach(post => {
+        //   var date = new Date(post.date);
           
-          post.date = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        });
+        //   var month = date.toLocaleString('default', { month: 'long' });
+        //   var day = date.getDate();
+        //   var year = date.getFullYear();
+
+        //   post.date = month + " " + day + ", " + year;
+
+        // });
+
+        // unescape the description, \\n -> \n
+
+        // description.replace(/\n/g, "\\n");
+
+        data.forEach(post => {
+          post.description = post.description.replace(/\\n/g, "\n");
+        }
+        );
+
 
         console.log('API data with images:', data);
         setAllPosts(data);

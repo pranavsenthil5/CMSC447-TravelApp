@@ -9,63 +9,72 @@ import React, { useEffect, useState } from 'react';
 import { get } from "http";
 import { NextResponse } from "next/server";
 
-async function getUserInfo() {
-    fetch("/auth/user", {
+
+const AddFolderPage = () => {
+  const [folders, setFolders] = useState([]);
+  const [enable, setEnable] = useState(false);
+
+  const handleAddFolder = (newFolder) => {
+    setFolders((prevFolders) => [...prevFolders, newFolder]);
+  };
+
+  useEffect(() => {
+    console.log("USE EFFECT");
+    fetch("http://127.0.0.1:8080/api/collection/all/1", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+
       },
-    })
-      .then(async (res) => {
-        if (res.status === 200) {
-            const data = await res.json();
-            console.log("GET USER INFO", data);
-            return data;
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+      mode: "cors",
+    }).then(async (res) => {
+      if (res.status === 200) {
+        const data = await res.json();
+        console.log("GET COLLECTIONS", data);
 
+        data.forEach((collection) => {
+          var folder = {
+            id: collection.id,
+            folderName: collection.name,
+            location: collection.location,
+          };
+          console.log("FOLDER", folder);
 
-const AddFolderPage = () => {
-    const [folders, setFolders] = useState([]);
-
-    const handleAddFolder = (newFolder) => {
-      // Add the new folder to the state
-      setFolders((prevFolders) => [...prevFolders, newFolder]);
-    };
-
-    useEffect(() => {
-        // get the user info
-        getUserInfo().then((data) => {
-            console.log("USER INFO");
-            console.log(data);
-        }
-        )}, []);
+          folders.some((folder) => folder.id === collection.id) ? console.log("FOLDER ALREADY EXISTS") : handleAddFolder(folder);
     
 
-    return (
-        <>
-            <Sidebar />
-            
-            
-            <h3 className="text-2xl text-center">Task Tracker</h3>
-            <hr className="border-2 border-gray-200 my-4 rounded-full w-1/2 mx-auto" />
-            <div className="text-center">
-            <AddFolderForm onAddFolder={handleAddFolder} folders={folders} />
-            </div>
+        });
+        setEnable(true);
 
-            <h3 className="text-2xl text-center">Create Post</h3>
-            <hr className="border-2 border-gray-200 my-4 rounded-full w-1/2 mx-auto" />
-
-            <div className='w-1/2 mx-auto'>
-                <CreatePost></CreatePost>
-            </div>
+      }
+    }
+    ).catch((err) => {
+      console.log(err);
+    }
+    );
+  }
+    , []);
 
 
-        </>
-    )
+  return (
+    <>
+      <Sidebar />
+      <h3 className="text-2xl text-center">Task Tracker</h3>
+      <hr className="border-2 border-gray-200 my-4 rounded-full w-1/2 mx-auto" />
+      <div className="text-center">
+        <AddFolderForm onAddFolder={handleAddFolder} folders={folders} setFolders={setFolders}/>
+      </div>
+
+      <h3 className="text-2xl text-center">Create Post</h3>
+      <hr className="border-2 border-gray-200 my-4 rounded-full w-1/2 mx-auto" />
+
+      <div className='w-1/2 mx-auto'>
+        <CreatePost></CreatePost>
+      </div>
+
+
+    </>
+  )
 }
 export default AddFolderPage;
