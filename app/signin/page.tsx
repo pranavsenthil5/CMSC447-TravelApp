@@ -29,14 +29,6 @@ export default function Home() {
         <div className="mb-8">
           <AuthForm />
         </div>
-
-        <div className='w-3/4  mx-auto ml-0'>
-                <AccountForm></AccountForm>
-            {/* </div>
-
-        <div>
-          <AccountForm /> */}
-        </div>
       </div>
     </main>
   );

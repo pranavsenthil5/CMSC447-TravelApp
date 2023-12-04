@@ -1,5 +1,6 @@
 import { ImageList, ImageListItem } from '@mui/material';
 
+
 interface ImageGridProps {
     images: string[];
     location: string;

@@ -6,7 +6,9 @@ import Sidebar  from '@/components/Sidebar';
 const ProfilePage = () => {
   return (
     
-      <><Sidebar /><h3 className="text-2xl text-center">Task Tracker</h3><hr className="border-2 border-gray-200 my-4 rounded-full w-1/2 mx-auto" /><div className="text-center">
+      <>
+      <Sidebar />
+      <h3 className="text-2xl text-center">Profile</h3><hr className="border-2 border-gray-200 my-4 rounded-full w-1/2 mx-auto" /><div className="text-center">
       <UserProvider>
         <div>
 

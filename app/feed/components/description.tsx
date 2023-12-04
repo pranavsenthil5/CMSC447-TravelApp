@@ -34,6 +34,12 @@ export default function Description({ post }: DescriptionProps) {
                 </div>
             </div>
 
+            <div className="flex flex-row mb-10">
+                <div className="text-xl font-sans hover:text-blue-600">
+                    <span className="font-light">{post.date}</span>
+                </div>
+            </div>
+
 
             <div className='flex flex-row mb-10'>
                 <TagGroup>
