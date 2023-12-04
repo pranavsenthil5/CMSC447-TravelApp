@@ -69,17 +69,17 @@ export default function Post() {
   const [postContent, setPostContent] = useState({});
   const [allPosts, setAllPosts] = useState([]);
 
-  useEffect(() => {
-    // add arrow key functionality
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowRight') {
-        handleNextPost();
-      } else if (event.key === 'ArrowLeft') {
-        handlePreviousPost();
-      }
+  // useEffect(() => {
+  //   // add arrow key functionality
+  //   document.addEventListener('keydown', (event) => {
+  //     if (event.key === 'ArrowRight') {
+  //       handleNextPost();
+  //     } else if (event.key === 'ArrowLeft') {
+  //       handlePreviousPost();
+  //     }
 
-    });
-  }, []);
+  //   });
+  // }, []);
 
   useEffect(() => {
     // get the user info
@@ -135,14 +135,18 @@ export default function Post() {
         console.log('API data:', data);
 
         // add images to the post
-        data.forEach(post => {
-          post.images = ['/img1.png', '/img2.png', '/img3.png'];
-        });
+        // data.forEach(post => {
+        //   post.images = ['/img1.png', '/img2.png', '/img3.png'];
+        // });
 
         // format the date
         data.forEach(post => {
           var date = new Date(post.date);
           // show the date in the format: Month Day, Year
+
+          // set zone to EST
+          date.setHours(date.getHours() - 5);
+          
           post.date = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
         });
 
@@ -196,7 +200,7 @@ export default function Post() {
           <div className="w-screen overflow-y-hidden flex justify-center items-center">
             <div className="flex flex-row align-middle justify-center max-h-[calc(100vh-60px)]">
               <div className="flex flex-col w-1/2 justify-center items-center overflow-hidden">
-                <ImageGrid images={images} location={"Location"} />
+                <ImageGrid images={allPosts[currentPost].image_uids} location={allPosts[currentPost].location} />
               </div>
               <div id="divider" className="border-r-2 border-gray-100"></div>
               <div className="flex flex-col w-1/2 overflow-y-scroll">
@@ -204,7 +208,8 @@ export default function Post() {
                   title: allPosts[currentPost].title,
                   location: allPosts[currentPost].location,
                   date: allPosts[currentPost].date,
-                  description: allPosts[currentPost].description
+                  description: allPosts[currentPost].description,
+                  tags: allPosts[currentPost].tags
                 }} />
               </div>
             </div>

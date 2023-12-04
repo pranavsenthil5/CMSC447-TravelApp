@@ -22,16 +22,19 @@ export default function PrivatePage(props) {
   const uploadToServer = async (event) => {
     const body = new FormData();
     body.append("file", image);
+    body.append("post_id", 1);
     const response = await fetch("/file/upload", {
       method: "POST",
       body
     });
+
+    console.log("JSON", response.json()); 
   };
 
   return (
     <div>
       <div>
-        <img src={createObjectURL} />
+        {/* <img src={createObjectURL} /> */}
         <h4>Select Image</h4>
         <input type="file" name="myImage" onChange={uploadToClient} />
         <button

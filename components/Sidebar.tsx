@@ -1,6 +1,6 @@
 
 'use client'
-import React from "react";
+import React, { useEffect } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Avatar, Input, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
 import SearchIcon from '@mui/icons-material/Search';
 import { useUser } from "@supabase/auth-helpers-react";
@@ -28,9 +28,29 @@ function signout() {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  var [email, setEmail] = React.useState("pranavv1@umbc.edu");
+  const name = "User";
 
-  const name = "Pranav";
-  const email = "pranavv1@umbc.edu";
+  useEffect(() => {
+    fetch("/auth/user", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+
+        if (res.status === 200) {
+          res.json().then((data) => {
+            setEmail(data.email);
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  
 
   const menuItems = [
     "Profile",

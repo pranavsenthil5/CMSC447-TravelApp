@@ -7,6 +7,7 @@ interface DescriptionProps {
         location: string,
         date: string,
         description: string
+        tags: string[]
     }
 }
 
@@ -22,6 +23,11 @@ export default function Description({ post }: DescriptionProps) {
     }
     // convert to set to remove duplicates
     const locationsSet = new Set(locations);
+
+    // add tags to locations
+    for (let i = 0; i < post.tags.length; i++) {
+        locationsSet.add( post.tags[i]);
+    }
 
     locations = Array.from(locationsSet);
 
