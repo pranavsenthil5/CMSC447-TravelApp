@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Installing Libraries
+
+```bash
+npm install
+```
+
+# Add .env.local file to the root directory
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=https://kqzctdxtctryinogwpip.supabase.co/
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxemN0ZHh0Y3RyeWlub2d3cGlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTUwODcyNDcsImV4cCI6MjAxMDY2MzI0N30.HN4g1L7K6GhXhA7ppIAWEah7MPe4K4k9B2m9p5GnZhA
+```
+
 ## Getting Started
 
 First, run the development server:
