@@ -8,6 +8,17 @@ import { get } from "http";
 import { getSupportedArchTriples } from "next/dist/build/swc";
 import { type } from "os";
 
+// search bar enter key press
+function handleKeyPress(e: any) {
+  console.log("key pressed")
+  console.log(e.keyCode);
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    var search = e.target.value;
+    window.location.href = "/search?search=" + search;
+  }
+}
+
 // signout post request
 function signout() {
   fetch("/auth/signout", {
@@ -106,6 +117,7 @@ export default function App() {
             startContent={
               <SearchIcon />}
             type="search"
+            onKeyDown={handleKeyPress}
           />
           <Dropdown placement="bottom-end">
             <DropdownTrigger>

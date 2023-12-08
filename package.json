@@ -26,6 +26,7 @@
         "formidable": "^3.5.1",
         "formik": "^2.4.5",
         "framer-motion": "^10.16.4",
+        "lunr": "^2.3.9",
         "mdb-react-ui-kit": "^6.3.0",
         "mime": "^4.0.0",
         "next": "latest",
