@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 npm install
 ```
 
-# Add .env.local file to the root directory
+# Create a `.env.local` file to the root directory
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=https://kqzctdxtctryinogwpip.supabase.co/
