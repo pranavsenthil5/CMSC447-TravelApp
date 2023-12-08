@@ -1,31 +1,38 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Installing Libraries
+# TravelApp
+A travel app that allows users to plan their trips and save their favorite destinations.
+_____
 
-```bash
-npm install
+**Note:** Please read this document carefully before running the project. If you have any questions, please contact Pranav.
+
+# Description
+The project has two parts. The front end and the back end. The front end is built with React(Next.js) and the back end is built with Python(maily APIs.) As that is the case, both parts are in different git repositories, and have to run simultaneously.
+
+
+## How to run the project
+### Back End
+1. Clone the [CMSC447-TravelApp-API git repository](https://github.com/pranavsenthil5/CMSC447-TravelApp-API)
+3. Navigate to the root directory of the project
+4. Run `pip install -r requirements.txt` to install all the dependencies
+5. Run `python3 app.py` OR `python app.py` to start the API server
+   
+### Front End
+1. Clone the [CMSC447-TravelApp git repository](https://github.com/pranavsenthil5/CMSC447-TravelApp)
+2. Navigate to the root directory of the project
+3. Perform a `git checkout Final` to checkout the branch that has the final code
+4. Add a `.env.local` file with the following contents:
 ```
-
-# Create a `.env.local` file to the root directory
-
-```bash
-NEXT_PUBLIC_SUPABASE_URL=https://kqzctdxtctryinogwpip.supabase.co/
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtxemN0ZHh0Y3RyeWlub2d3cGlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTUwODcyNDcsImV4cCI6MjAxMDY2MzI0N30.HN4g1L7K6GhXhA7ppIAWEah7MPe4K4k9B2m9p5GnZhA
+NEXT_PUBLIC_SUPABASE_URL=https://wlsngebjldmcjopnueul.supabase.co/
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indsc25nZWJqbGRtY2pvcG51ZXVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTkyMDk2MjYsImV4cCI6MjAxNDc4NTYyNn0.EnffLt8wSfVdJbR5-G3kD0g-j3Dib8OIM8tIV4jaH4M
 ```
+1. Run `npm install` to install all the dependencies
+2. Run `npm run dev` to start the development server
+3. Navigate to `localhost:3000` to view the project
 
-## Getting Started
+## Notes
+On the sign in page, click on create account and then proceed. There will be no email verification, so you can directly sign in after creating an account. However, you will have to refresh the after clickin on sign in. 
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
